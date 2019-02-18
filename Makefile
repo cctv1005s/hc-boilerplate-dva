@@ -19,7 +19,7 @@ release: front
 front:
 	@echo "building assets..."
 	@yarn install --registry=https://registry.npm.taobao.org
-	@cd assets && NODE_ENV=production yarn install --registry=https://registry.npm.taobao.org
+	@cd assets && NODE_ENV=development yarn install --registry=https://registry.npm.taobao.org
 	@cd assets && ../node_modules/.bin/honeypack build
 	@if [ -d assets/static ]; then\
 		cp -r assets/static assets/.package/static;\
