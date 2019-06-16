@@ -26,9 +26,6 @@ front:
 	fi
 	@echo "assets build done\n"
 
-test:
-	@node_modules/.bin/mocha --require intelli-espower-loader $(shell find test -name *.test.js)
-
 cover:
 	@node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- $(shell find test -name *.test.js)
 
