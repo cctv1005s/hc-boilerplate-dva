@@ -1,13 +1,14 @@
 {
   "name": "hc-boilerplate-dva",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "a simple hc-bee boilerplate with hoj.",
   "main": "index.js",
   "scripts": {
     "test": "npx mocha --require intelli-espower-loader ./test/index.test.js",
     "eslint": "eslint --ext .js --ext .jsx --ignore-path .eslintignore .",
     "postpack": "rm -f gitignore",
-    "cov": "npx nyc npm run test"
+    "cov": "npx nyc npm run test",
+    "prepublishOnly": "make clean"
   },
   "eslintConfig": {
     "extends": "aliyun"
