@@ -1,5 +1,7 @@
 # hc-boilerplate-dva
 
+[![CircleCI](https://circleci.com/gh/cctv1005s/hc-boilerplate-dva.svg?style=svg)](https://circleci.com/gh/cctv1005s/hc-boilerplate-dva)
+
 ## dependences
 
 - node >= 8.0.0

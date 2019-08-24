@@ -16,8 +16,20 @@ try {
   console.warn('no test config set');
 }
 
+let hcJson = {
+  common: {},
+  apps: {
+    [pkg.name]: {}
+  }
+};
+
 const appName = pkg.name;
-const hcJson = require(path.join(os.homedir(), '.honeycomb.json'));
+try {
+  hcJson = require(path.join(os.homedir(), '.honeycomb.json'));
+} catch (e) {
+  e;
+}
+
 
 const appConfig = hcJson.apps[appName];
 const commonConfig = hcJson.common;
