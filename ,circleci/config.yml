@@ -1,0 +1,17 @@
+version: 2
+
+jobs:
+  build_and_eslint:
+    docker: 
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - run: make install
+      - run: npm run eslint
+      - run: npm run test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build_and_eslint
