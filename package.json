@@ -1,6 +1,6 @@
 {
   "name": "hc-boilerplate-dva",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "a simple hc-bee boilerplate with hoj.",
   "main": "app.js",
   "scripts": {
