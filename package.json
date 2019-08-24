@@ -2,7 +2,7 @@
   "name": "hc-boilerplate-dva",
   "version": "0.6.0",
   "description": "a simple hc-bee boilerplate with hoj.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "npx mocha --require intelli-espower-loader ./test/index.test.js",
     "eslint": "eslint --ext .js --ext .jsx --ignore-path .eslintignore .",
