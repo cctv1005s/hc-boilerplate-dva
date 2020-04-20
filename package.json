@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "npx mocha --require intelli-espower-loader ./test/index.test.js",
-    "eslint": "eslint --ext .js --ext .jsx --ignore-path .eslintignore .",
+    "eslint": "eslint --fix --ext .js --ext .jsx --ignore-path .eslintignore .",
     "postpack": "rm -f gitignore",
     "cov": "npx nyc npm run test",
     "prepublishOnly": "make clean"
