@@ -1,7 +1,7 @@
 {
   "name": "hc-boilerplate-dva",
   "version": "0.6.1",
-  "description": "a simple hc-bee boilerplate with hoj.",
+  "description": "a simple hc-bee boilerplate with dva.",
   "main": "app.js",
   "scripts": {
     "test": "npx mocha --require intelli-espower-loader ./test/index.test.js",
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/cctv1005s/hc-boilerplate-dva.git",
   "dependencies": {
-    "hc-bee": "^0.0.6",
+    "hc-bee": "^1.0.0",
     "honeypack": "^1.0.11",
     "lodash": ">=4.17.13",
     "pre-commit": "^1.2.2"
