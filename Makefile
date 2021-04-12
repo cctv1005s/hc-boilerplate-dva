@@ -1,3 +1,7 @@
+VERSION = $(shell node -e "console.log(require('./package.json').version)")
+BUILD_NO = $(shell node -e "console.log(require('./package.json').build)")
+APP_NAME = $(shell node -e "console.log(require('./package.json').name)")
+
 install:
 	@yarn install --registry=https://registry.npm.taobao.org
 	@cd assets && yarn install --registry=https://registry.npm.taobao.org
@@ -15,6 +19,12 @@ release: front
 	@if [ -f out/release/config/config_${env}.js ]; then\
 		cp out/release/config/config_${env}.js out/release/config/config.js;\
 	fi
+
+package: release
+	@cd out/release/config && cat config_production.js > config.js
+	@cd out && mv release ${APP_NAME}_$(VERSION)_$(BUILD_NO)
+	@cd out && tar -czf ${APP_NAME}_$(VERSION)_$(BUILD_NO).tgz ${APP_NAME}_$(VERSION)_$(BUILD_NO)
+
 
 front:
 	@echo "building assets..."
